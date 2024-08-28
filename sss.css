@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  text-decoration-color: #ed6a6e;
+
+}
+.upperhome {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba (0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content1 {
+  text-align: center;
+}
+.content1 h1 {
+  font-size:  100px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+.content1 a{
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  transition: 0.03s;
+}
+.content1 a:hover{
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+.videobg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10%;
+  background: #6d6565ae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s;
+
+}
+
+
+.logo {
+  font-size: 50px;
+  font-family: 'Marck Script';
+  color: gold;
+  font-weight: 900;
+  transition: 1s ease;
+}  
+
+.logo:hover {
+  color: #ed6a6e;
+  text-shadow: 0 0 25px #ed6a6e,
+  0 0 50px #ed6a6e,
+  0 0 100px #ed6a6e;
+  transform: scale(1.1);
+}
+
+.navbar a {
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin: 0 15px;
+  border-bottom: 3px solid transparent;
+  transition: 1s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ed6a6e;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.chat {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 1s ease;
+}
+
+.chat:hover {
+  background-color: #ed6a6e;
+  box-shadow: 0 0 25px #ed6a6e;
+  color: rgb(255, 255, 255);
+}
+
+.home {
+  background:rgb(27, 26, 26);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  padding: 30px 12% 0;
+  margin-bottom: 10px;
+  flex-wrap: wrap; 
+}
+
+.home-content {
+  margin-top: 5rem;
+  max-width: 1000px;
+  flex: 1; 
+}
+
+.home-content h3 {
+  font-size: 60px;
+  color: #ed6a6e;
+  font-family: "Poppins";
+}
+
+
+.home-content p {
+  font-size: 25px;
+  color: white;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .home-content h3 {
+    font-size: 32px;
+  }
+  
+  .home-content h1 {
+    font-size: 48px;
+  }
+  
+  .home-content p {
+    font-size: 16px;
+  }
+  
+  .btn-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .img-box img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .home-content h3 {
+    font-size: 28px;
+  }
+  
+  .home-content h1 {
+    font-size: 36px;
+  }
+  
+  .home-content p {
+    font-size: 14px;
+  }
+  
+  .btn-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .img-box img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services {
+  background: #000;
+  padding: 50px 10%;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-box:hover {
+  background-color: #ed6a6e;
+  transform: translateY(-10px);
+}
+
+.service-info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.service-info p {
+  font-size: 1rem;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box {
+    height: auto;
+  }
+
+  .service-info h4 {
+    font-size: 2rem;
+  }
+
+  .service-info p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .service-info h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-info p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .service-info h4 {
+    font-size: 1.8rem;
+  }
+
+  .service-info p {
+    font-size: 1.2rem;
+  }
+}
+
+.about {
+  padding: 100px 12%;  
+  display: flex;
+  align-items: center;
+  gap: 7em;
+  flex-wrap: wrap; 
+  justify-content: center;
+  background: rgb(104, 104, 104);
+  background-image: url(BG.png);
+  background-size: 400% 400%; 
+}
+
+
+.about-content1 h3 {
+  font-size: 10px;
+  text-align: left;
+  color: white;
+  margin-bottom: 1px;
+  font-family: 'Poppins';
+}
+
+.about-content h2 {
+  font-size: 30px;
+  text-align: left;
+  color: #ed6a6e;
+  font-family: "Poppins";
+}
+
+.about-content1 {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.about-content1 .span5 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-size: 2vw;
+}
+
+.about-content1 .span5::before {
+  content: "Frontend Developer";
+  color: rgb(255, 255, 255);
+  animation: words 20s infinite steps(1);
+}
+
+.about-content1 .span5::after {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  color: #ed6a6e;
+  font-family: "Poppins";
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes words {
+  0%, 20% {
+    content: "Website development refers to the process of building and maintaining websites It encompasses all the tasks involved in creating a website, from coding and writing markup to designing, planning, and deploying a website on the internet. This can include both front-end (client-side) and back-end (server-side) development." ;
+  }
+  21%, 40% {
+    content: "Web design is the process of creating the visual layout, user interface, and overall aesthetic of a website. It involves planning and building the elements of a website, including structure, layout, graphics, colors, fonts, and images, to ensure a good user experience. Web design focuses more on the look and feel of a site rather than the functionality.";
+  }
+  41%, 60% {
+    content: "Frontend development, also known as client-side development, involves creating the part of a website or web application that users interact with directly. This includes everything from the layout and navigation to the buttons and forms. Frontend developers use technologies like HTML, CSS, and JavaScript to build and style the visual components of a website.";
+  }
+  61%, 80% {
+    content: "Backend development, or server-side development, focuses on the server, application, and database that work behind the scenes to support a website's functionality. Backend developers are responsible for creating and maintaining the technology required to process data and handle requests from the front end.";
+  }
+  81%, 100% {
+    content: "Full-stack development refers to the practice of working on both the front end (client side) and back end (server side) of a website or web application. A full-stack developer has the skills and knowledge to handle all aspects of web development, including designing user interfaces, creating server-side logic, managing databases, and integrating various services.";
+  }
+}
+
+@keyframes typing {
+  0%, 100% {
+    width: 0;
+  }
+  5%, 95% {
+    width: 100%;
+  }
+}
+
+.about-content p {
+  font-size: 20px;
+  margin: 25px 0 30px;
+  color: white;
+  font-family: 'Amarante';
+}
+
+
+.footer {
+  background-color: #000;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+.footer .social {
+  margin-bottom: 20px;
+}
+
+.footer .social a {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .social a:hover {
+  color: #ed6a6e;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+.footer ul li {
+  margin: 0 15px;
+}
+
+.footer ul li a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ed6a6e;
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
